@@ -1,0 +1,35 @@
+CREATE DATABASE po2cl1_nectarpeña;
+
+USE po2cl1_nectarpeña;
+
+create table tb_empleado (
+  id_empleado char(7) not null,
+  apellido varchar(25),
+  nombre varchar(15),
+  edad int check (edad >= 18),
+  sexo enum('M', 'F'),
+  salario decimal(8, 2) check (salario between 1500 and 2500),
+  primary key (id_empleado)
+);
+
+insert into tb_empleado values ('EMP0001', 'TORRES', 'JOSE', 22, 'M', 1500);
+insert into tb_empleado values  ('EMP0002', 'GARCIA', 'MARIA', 21, 'F', 1750);
+insert into tb_empleado values  ('EMP0003', 'FLORES', 'JUAN', 22, 'M', 1850);
+insert into tb_empleado values  ('EMP0004', 'CASAS', 'ANA', 23, 'F', 2000);
+
+select*from tb_empleado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
